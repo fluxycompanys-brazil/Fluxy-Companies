@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  /* Brand semantic tokens */
+  --color-brand-deep: #1E0A3C;
+  --color-brand-deep-dark: #100420;
+  --color-brand-deep-card: #1C0A36;
+  --color-brand-deep-elevated: #260E4A;
+  
+  --color-brand-neon: #FF2D87;
+  --color-brand-neon-hover: #E61973;
+  --color-brand-neon-light: #FF5E9F;
+  --color-brand-neon-faint: rgba(255, 45, 135, 0.08);
+  --color-brand-neon-border: rgba(255, 45, 135, 0.28);
+  --color-brand-neon-glow: rgba(255, 45, 135, 0.35);
+
+  /* Surface tokens */
+  --color-surface-canvas: #0C0318;
+  --color-surface-card: #16072C;
+  --color-surface-card-hover: #1E0B3C;
+  --color-surface-elevated: #240C46;
+  --color-surface-border: rgba(255, 255, 255, 0.09);
+  --color-surface-border-neon: rgba(255, 45, 135, 0.35);
+
+  /* Content tokens */
+  --color-content-main: #FAF9FD;
+  --color-content-secondary: #D4CEE2;
+  --color-content-muted: #9E94B8;
+  --color-content-faint: #6D6385;
+
+  /* Accent status */
+  --color-accent-success: #10B981;
+  --color-accent-whatsapp: #25D366;
+  --color-accent-whatsapp-hover: #20BD5A;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #0C0318;
+  color: #FAF9FD;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-neon);
+  outline-offset: 2px;
+}
+
+/* Subtle glassmorphism highlight */
+.glass-panel {
+  background: rgba(26, 9, 48, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-neon {
+  background: rgba(30, 10, 60, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 45, 135, 0.22);
+}
+
+.glow-neon {
+  box-shadow: 0 0 30px -5px rgba(255, 45, 135, 0.35);
+}
+
+.glow-neon-subtle {
+  box-shadow: 0 10px 30px -10px rgba(255, 45, 135, 0.2);
+}
